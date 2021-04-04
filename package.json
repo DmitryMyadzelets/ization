@@ -4,8 +4,12 @@
   "description": "Internationalization. Simplest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "supervisor --no-restart-on exit node test",
+    "test": "node test"
   },
   "author": "Dmitry Myadzelets",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  }
 }
