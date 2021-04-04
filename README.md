@@ -15,7 +15,7 @@ No pluralization or any other manipulation of the source dictionaries is impleme
 
 When one dictionay is provided, as it happens on client-side:
 ```js
-const { t } = require('ization')({
+const { t } = require('ization').dictionary({
   'Hello friend': 'Ciao amico'
 })
 
@@ -25,8 +25,8 @@ t('Not in dictionary') // Not in dictionary
 
 When a few dictionaries are provided, as it happens on server-side:
 ```js
-const { dictionary } = require('ization')
-const speak = dictionary({
+const { dictionares } = require('ization')
+const speak = dictionaries({
   en: {
     'hi': 'Hello'
   },
