@@ -5,6 +5,9 @@ const isObject = o => 'object' === typeof o && o !== null
 const t = map => isObject(map) ? key => map[key] || key : map
 
 // Returns a function to access the given dictionary by the language
-const dictionary = dic => language => t(dic[language]) || t
+const dictionaries = dic => language => t(dic[language]) || t
 
-module.exports = { t, dictionary }
+module.exports = {
+  dictionary: t, 
+  dictionaries
+}

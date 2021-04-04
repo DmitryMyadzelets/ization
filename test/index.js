@@ -1,37 +1,46 @@
 const equal = require('assert').deepEqual
 const ization = require('..')
 
-;(t => {
-  equal('hi', t('hi'))
-
-  t = t({ hi: 'hello' })
-  equal('hello', t('hi'))
-
-  equal(undefined, t())
-})
-  (ization.t)
+const english = {
+  hi: 'hello'
+}
+const italian = {
+  hi: 'ciao'
+}
 
 ;(dictionary => {
-  let t 
-  t = dictionary({
-    en: {
-      hi: 'hello' 
-    }
-  })
-  equal('hello', t('en')('hi'))
-  equal('hi', t('it')('hi'))
+  equal('hi', dictionary('hi'))
 
-  t = dictionary({
-    en: { 
-      hi: 'hello' 
-    }, 
-    it: { 
-      hi: 'ciao' 
-    }
-  })
-  equal('ciao', t('it')('hi'))
+  say = dictionary(english)
+  equal('hello', say('hi'))
 
-  equal(undefined, t('it')())
-  equal(undefined, t()())
+  equal(undefined, say())
 })
   (ization.dictionary)
+
+;(dictionaries => {
+  let speak
+  let say
+
+  speak = dictionaries({
+    en: english
+  })
+  say = speak('en')
+  equal('hello', say('hi'))
+  say = speak('it')
+  equal('hi', say('hi'))
+
+  speak = dictionaries({
+    en: english, 
+    it: italian
+  })
+
+  say = speak('it')
+  equal('ciao', say('hi'))
+
+  equal(undefined, say())
+
+  say = speak()
+  equal(undefined, say())
+})
+  (ization.dictionaries)
