@@ -11,12 +11,11 @@ const italian = {
 ;(dictionary => {
   equal('hi', dictionary('hi'))
 
-  say = dictionary(english)
+  const say = dictionary(english)
   equal('hello', say('hi'))
 
   equal(undefined, say())
-})
-  (ization.dictionary)
+})(ization.dictionary)
 
 ;(dictionaries => {
   let speak
@@ -25,6 +24,7 @@ const italian = {
   speak = dictionaries({
     en: english
   })
+
   say = speak('en')
   equal('hello', say('hi'))
   say = speak('it')
@@ -42,5 +42,4 @@ const italian = {
 
   say = speak()
   equal(undefined, say())
-})
-  (ization.dictionaries)
+})(ization.dictionaries)
