@@ -15,6 +15,8 @@ const italian = {
   equal('hello', say('hi'))
 
   equal(undefined, say())
+  equal('wrong', say('wrong'))
+  equal('wrong', say`wrong`)
 })(ization.dictionary)
 
 ;(dictionaries => {
