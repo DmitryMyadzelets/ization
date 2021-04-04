@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "supervisor --no-restart-on exit node test",
-    "test": "node test"
+    "test": "node test && npx eslint ."
   },
   "author": "Dmitry Myadzelets",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^7.23.0",
     "supervisor": "^0.12.0"
   }
 }
