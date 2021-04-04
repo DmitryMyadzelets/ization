@@ -18,13 +18,13 @@ const t = dictionary({
   'Hello friend': 'Ciao amico'
 })
 
-t('Hello friend') // Ciao amico
-t('Not in dictionary') // Not in dictionary
+t`Hello friend` // Ciao amico
+t`Not in dictionary` // Not in dictionary
 ```
 
 When a few dictionaries are provided, as it happens on server-side:
 ```js
-const { dictionares } = require('ization')
+const { dictionaries } = require('ization')
 const speak = dictionaries({
   en: {
     'hi': 'Hello'
@@ -35,5 +35,5 @@ const speak = dictionaries({
 })
 const t = speak('it')
 
-t('hi') // Ciao
+t`hi` // Ciao
 ```
