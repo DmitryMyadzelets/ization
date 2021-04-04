@@ -1,7 +1,7 @@
 {
   "name": "ization",
-  "version": "0.0.1",
-  "description": "Internationalization. Simplest",
+  "version": "0.1.0",
+  "description": "Primitive Internationalization",
   "main": "index.js",
   "scripts": {
     "dev": "supervisor --no-restart-on exit node test",
