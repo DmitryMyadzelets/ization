@@ -1,4 +1,4 @@
-const equal = require('assert').deepEqual
+const equal = require('assert').deepStrictEqual
 const ization = require('..')
 
 const english = {
@@ -11,12 +11,17 @@ const italian = {
 ;(dictionary => {
   equal('hi', dictionary('hi'))
 
-  const say = dictionary(english)
-  equal('hello', say('hi'))
+  const t = dictionary(english)
+  equal('hello', t('hi'))
 
-  equal(undefined, say())
-  equal('wrong', say('wrong'))
-  equal('wrong', say`wrong`)
+  equal(undefined, t())
+  equal('wrong', t('wrong'))
+  equal('wrong', t`wrong`)
+  equal(0, t(0))
+  equal(1, t(1))
+  equal('', t``)
+  equal(null, t(null))
+
 })(ization.dictionary)
 
 ;(dictionaries => {
