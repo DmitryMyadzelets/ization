@@ -1,6 +1,6 @@
 {
   "name": "ization",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Primitive Internationalization",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,10 @@
   },
   "author": "Dmitry Myadzelets",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DmitryMyadzelets/ization"
+  },
   "devDependencies": {
     "eslint": "^7.23.0",
     "supervisor": "^0.12.0"
