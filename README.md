@@ -11,7 +11,7 @@ No pluralization or any other manipulation of the source dictionaries is impleme
 
 # Usage
 
-When one dictionay is provided, as it happens on client-side:
+When one dictionary is provided, as it happens on client-side:
 ```js
 const { dictionary } = require('ization')
 const t = dictionary({
