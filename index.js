@@ -1,13 +1,15 @@
 const isObject = o => 'object' === typeof o && o !== null
-
-// Returns a function to access the given map by the key
-// Returns the key back if a map is not given
-const t = map => isObject(map) ? key => map[key] || (isObject(key) ? String(key) : key) : map
-
+//
+// Returns a function to access the given map by a key
+function dictionary (map) {
+  if (!isObject(map)) { map = {} }
+  // Return value from the dictionary for the given key
+  return key => map[key]
+}
 // Returns a function to access the given dictionary by the language
-const dictionaries = dic => language => t(dic[language]) || t
+const dictionaries = maps => language => dictionary(maps[language]) || dictionary
 
 module.exports = {
-  dictionary: t, 
+  dictionary, 
   dictionaries
 }
