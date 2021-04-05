@@ -1,4 +1,4 @@
-# Internalization
+# Internationalization
 
 Why? I needed a simplest solution to internationalize my project both on
 server and client-sides. 
