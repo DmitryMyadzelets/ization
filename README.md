@@ -22,7 +22,7 @@ t`Hello friend` // Ciao amico
 t`Not in dictionary` // undefined 
 ```
 
-When a few dictionaries are provided, as it happens on server-side:
+When a few dictionaries is provided, as it happens on server-side:
 ```js
 const { dictionaries } = require('ization')
 const speak = dictionaries({
