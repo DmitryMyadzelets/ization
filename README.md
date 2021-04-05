@@ -19,7 +19,7 @@ const t = dictionary({
 })
 
 t`Hello friend` // Ciao amico
-t`Not in dictionary` // Not in dictionary
+t`Not in dictionary` // undefined 
 ```
 
 When a few dictionaries are provided, as it happens on server-side:
