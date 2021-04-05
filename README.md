@@ -3,7 +3,7 @@
 Why? I needed a simplest solution to internationalize my project both on
 server and client-sides. 
 
-I tried to use [LinguUI](https://github.com/lingui/js-lingui) but it didn't work out of the box. The [i18n](https://github.com/mashpie/i18n-node) did the job but it's not modular and includes many stuff I didn't need. Howerver, I liked how it worked at the most basic level. So, I just reproduced an essential functionality I needed at that moment.
+I tried to use [LinguUI](https://github.com/lingui/js-lingui) but it didn't work out of the box. The [i18n](https://github.com/mashpie/i18n-node) did the job but it's not modular and includes many stuff I didn't need. Howerver, I liked how it worked at the most basic level. So, I just reproduced an essential functionality I needed at that moment. The [Polyglot](https://github.com/airbnb/polyglot.js) seems to be perfect option.
 
 I concider this project as a primer on internalization. 
 
